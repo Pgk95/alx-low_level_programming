@@ -2,8 +2,8 @@
 
 /**
  * print_times_table - Prints the times table of the input,
- * satarting with 0.
- * @n: The vslue of the times to be printed.
+ * starting with 0.
+ * @n: The value of the times to be printed.
  */
 void print_times_table(int n)
 {
