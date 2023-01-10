@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	len = 0;
-	while (s1[len] != '\0')
+	while (s1[len1] != '\0')
 		len1++;
 	len2 = 0;
 	while (s2[len2] != '\0')
@@ -34,6 +34,7 @@ char *str_concat(char *s1, char *s2)
 	/*checks if alocation was successful*/
 	if (nstr == NULL)
 		return (NULL);
+
 	i = 0;
 	while (i < len1)
 	{
