@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  *  main - prints the file name
  *  Return: Always 0 (Success)
