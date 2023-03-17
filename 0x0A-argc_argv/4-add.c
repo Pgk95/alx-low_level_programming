@@ -1,27 +1,29 @@
-#include "main.h"
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 /*
- * main - prints the multiplications of two integers
- * @argc: counts the arguments
+ * main - adds positive numbers.
+ * @argc: counts the number of arguments
  * @argv: argument vector
- * Return: 0 if true, 1 if false
+ * Return: 0 - success
  */
 int main(int argc, char *argv[])
 {
-	int result = 0, num1, num2;
-	char i, j;
+	int i, j, add = 0;
 
-	if (argc != 3)
-{
-	printf("%s\n", "0");
-	return (1);
-}
+	for (i = 1; i < argc; i++)
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	result = num1 + num2;
-
-	printf("%d\n", result);
-	return (0);
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			add += atoi(argv[i]);
+		}
+		printf("%d\n", add);
+		return (0);
+	}
 }
