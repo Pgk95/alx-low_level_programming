@@ -2,7 +2,12 @@
 """returns the permeter of the island."""
 
 def island_perimeter(grid):
-    
+    """
+    Args: grid (List[List[int]]):
+
+    Returns: int type - The perimeter of the island. 
+    """
+
     rows = len(grid)
     colomuns = len(grid[0])
     perimeter = 0
