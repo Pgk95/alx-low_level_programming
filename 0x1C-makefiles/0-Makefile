@@ -1,0 +1,8 @@
+build: all
+
+all::
+	gcc main.c school.c -o school
+run:
+	./school
+
+clean: rm -f school
