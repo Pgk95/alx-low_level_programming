@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """returns the permeter of the island."""
 
+
 def island_perimeter(grid):
     """
     Args: grid (List[List[int]]):
 
-    Returns: int type - The perimeter of the island. 
+    Returns: int type - The perimeter of the island.
     """
 
     rows = len(grid)
@@ -21,5 +22,5 @@ def island_perimeter(grid):
                     perimeter -= 2
                 if j > 0 and grid[i][j - 1] == 1:
                     perimeter -= 2
-    
+
     return perimeter
