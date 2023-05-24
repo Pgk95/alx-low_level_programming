@@ -4,6 +4,6 @@ SRC = .c
 all: build
 
 build:
-	$(CC) main.c school.c -o school
+	$(CC) $(SRC) -o school
 
 clean: rm -f school
