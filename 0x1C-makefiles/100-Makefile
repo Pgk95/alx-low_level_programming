@@ -1,20 +1,42 @@
-CC = gcc
-SRC = main.c holberton.c
-OBJ = $(SRC:.c=.o)
-NAME = holberton
-CFLAGS = -Wall -Werror -Wextra -pedantic
+# Compiler
+CC := gcc
+
+# Source files
+SRC := $(wildcard *.c)
+
+# Object files
+OBJ := $(SRC:.c=.o)
+
+# Executable name
+NAME := school
+
+# Program to delete files
+RM := rm -f
+
+# Compiler flags
+CFLAGS := -Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean oclean fclean re
 
-all: m.h $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) *~ $(NAME)
+	@$(RM) *~ $(NAME)
 
 oclean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
-fclean: clean oclean
+fclean: clean
+	@$(RM) $(NAME)
 
 re: fclean all
+
+# Compile source files
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# Check if m.h header file exists
+$(OBJ): m.h
